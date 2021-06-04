@@ -1,0 +1,65 @@
+Insert into ZAPOSLENI (JMBGZ,IMEZ,PREZZ,BRTELZ,VRSTAZ) values ('2002976777021','Marko','Markovic','064123456','Profesor');
+Insert into ZAPOSLENI (JMBGZ,IMEZ,PREZZ,BRTELZ,VRSTAZ) values ('1001976777011','Ana','Jovanovic',null,'AdminRad');
+Insert into ZAPOSLENI (JMBGZ,IMEZ,PREZZ,BRTELZ,VRSTAZ) values ('1002976777011','Petar','Pavlovic',null,'Profesor');
+Insert into ZAPOSLENI (JMBGZ,IMEZ,PREZZ,BRTELZ,VRSTAZ) values ('1003976777011','Mina','Ivkovic',null,'Profesor');
+Insert into ZAPOSLENI (JMBGZ,IMEZ,PREZZ,BRTELZ,VRSTAZ) values ('1004976777011','Jovan','Pajic',null,'Profesor');
+
+Insert into PROFESOR (JMBGZ) values ('2002976777021');
+Insert into PROFESOR (JMBGZ) values ('1002976777011');
+Insert into PROFESOR (JMBGZ) values ('1003976777011');
+Insert into PROFESOR (JMBGZ) values ('1004976777011');
+
+Insert into ADMINISTRATIVNIRADNIK (JMBGZ) values ('1001976777011');
+
+Insert into JEZIK (SIFJEZ,NAZJEZ) values ('ENG ','Engleski');
+Insert into JEZIK (SIFJEZ,NAZJEZ) values ('NEM ','Nemacki');
+Insert into JEZIK (SIFJEZ,NAZJEZ) values ('FRA ','Francuski');
+
+Insert into NIVO (SIFNIVO,NAZNIVO) values ('CFA2','A2');
+Insert into NIVO (SIFNIVO,NAZNIVO) values ('CFB1','B1');
+Insert into NIVO (SIFNIVO,NAZNIVO) values ('CFB2','B2');
+Insert into NIVO (SIFNIVO,NAZNIVO) values ('CFC1','C1');
+
+Insert into POVEZANSA (SIFJEZ,SIFNIVO) values ('ENG ','CFB2');
+Insert into POVEZANSA (SIFJEZ,SIFNIVO) values ('NEM ','CFC1');
+Insert into POVEZANSA (SIFJEZ,SIFNIVO) values ('ENG ','CFC1');
+
+Insert into POZNAJE (SIFJEZ,JMBGZ) values ('ENG ','2002976777021');
+Insert into POZNAJE (SIFJEZ,JMBGZ) values ('NEM ','2002976777021');
+Insert into POZNAJE (SIFJEZ,JMBGZ) values ('ENG ','1002976777011');
+Insert into POZNAJE (SIFJEZ,JMBGZ) values ('ENG ','1003976777011');
+Insert into POZNAJE (SIFJEZ,JMBGZ) values ('ENG ','1004976777011');
+
+Insert into KURS (IDK,DATPK,DATKK,SIFJEZ,SIFNIVO,JMBGZ) values (4,to_date('01-JAN-20','DD-MON-RR'),to_date('01-MAY-20','DD-MON-RR'),'ENG ','CFB2','1002976777011');
+Insert into KURS (IDK,DATPK,DATKK,SIFJEZ,SIFNIVO,JMBGZ) values (5,to_date('10-MAR-20','DD-MON-RR'),to_date('23-MAY-20','DD-MON-RR'),'ENG ','CFB2','1004976777011');
+Insert into KURS (IDK,DATPK,DATKK,SIFJEZ,SIFNIVO,JMBGZ) values (1,to_date('01-JAN-21','DD-MON-RR'),to_date('01-MAY-21','DD-MON-RR'),'ENG ','CFC1','2002976777021');
+Insert into KURS (IDK,DATPK,DATKK,SIFJEZ,SIFNIVO,JMBGZ) values (2,to_date('01-JAN-21','DD-MON-RR'),to_date('01-MAY-21','DD-MON-RR'),'ENG ','CFB2','1003976777011');
+Insert into KURS (IDK,DATPK,DATKK,SIFJEZ,SIFNIVO,JMBGZ) values (3,to_date('01-JAN-21','DD-MON-RR'),to_date('01-MAY-21','DD-MON-RR'),'NEM ','CFC1','2002976777021');
+
+Insert into POLAZNIK (JMBGP,IMEP,PREZP,BRTELP) values ('0705005777005','Ivan','Jovic',null);
+Insert into POLAZNIK (JMBGP,IMEP,PREZP,BRTELP) values ('0805005777005','Lazar','Markovic',null);
+Insert into POLAZNIK (JMBGP,IMEP,PREZP,BRTELP) values ('0505005777005','Pera','Peric',null);
+Insert into POLAZNIK (JMBGP,IMEP,PREZP,BRTELP) values ('0605005777005','Mika','Mikic',null);
+
+Insert into POHADJA (BRCAS,CENA,DATISPL,IDK,JMBGP,JMBGZ) values (10,15000,to_date('20-JAN-21','DD-MON-RR'),5,'0605005777005','1001976777011');
+Insert into POHADJA (BRCAS,CENA,DATISPL,IDK,JMBGP,JMBGZ) values (10,15000,to_date('20-JAN-21','DD-MON-RR'),5,'0705005777005','1001976777011');
+Insert into POHADJA (BRCAS,CENA,DATISPL,IDK,JMBGP,JMBGZ) values (10,15000,to_date('20-JAN-21','DD-MON-RR'),1,'0705005777005','1001976777011');
+Insert into POHADJA (BRCAS,CENA,DATISPL,IDK,JMBGP,JMBGZ) values (10,15000,to_date('20-JAN-21','DD-MON-RR'),1,'0505005777005','1001976777011');
+Insert into POHADJA (BRCAS,CENA,DATISPL,IDK,JMBGP,JMBGZ) values (10,15000,to_date('20-JAN-21','DD-MON-RR'),1,'0605005777005','1001976777011');
+Insert into POHADJA (BRCAS,CENA,DATISPL,IDK,JMBGP,JMBGZ) values (10,15000,to_date('20-JAN-21','DD-MON-RR'),2,'0605005777005','1001976777011');
+Insert into POHADJA (BRCAS,CENA,DATISPL,IDK,JMBGP,JMBGZ) values (10,15000,to_date('20-JAN-21','DD-MON-RR'),3,'0605005777005','1001976777011');
+
+Insert into UCIONICA (SIFUC,SPRAT) values ('UC1 ',1);
+
+Insert into CAS (RBRCAS,DATCAS,VRECAS,IDK,SIFUC) values (2,to_date('06-FEB-20','DD-MON-RR'),to_date('06-FEB-20','DD-MON-RR'),1,'UC1 ');
+Insert into CAS (RBRCAS,DATCAS,VRECAS,IDK,SIFUC) values (3,to_date('12-FEB-20','DD-MON-RR'),to_date('12-FEB-20','DD-MON-RR'),1,'UC1 ');
+Insert into CAS (RBRCAS,DATCAS,VRECAS,IDK,SIFUC) values (4,to_date('13-FEB-20','DD-MON-RR'),to_date('13-FEB-20','DD-MON-RR'),1,'UC1 ');
+Insert into CAS (RBRCAS,DATCAS,VRECAS,IDK,SIFUC) values (1,to_date('02-FEB-20','DD-MON-RR'),to_date('02-FEB-20','DD-MON-RR'),2,'UC1 ');
+Insert into CAS (RBRCAS,DATCAS,VRECAS,IDK,SIFUC) values (1,to_date('02-FEB-20','DD-MON-RR'),to_date('02-FEB-20','DD-MON-RR'),4,'UC1 ');
+Insert into CAS (RBRCAS,DATCAS,VRECAS,IDK,SIFUC) values (1,to_date('02-FEB-20','DD-MON-RR'),to_date('02-FEB-20','DD-MON-RR'),5,'UC1 ');
+Insert into CAS (RBRCAS,DATCAS,VRECAS,IDK,SIFUC) values (1,to_date('02-FEB-20','DD-MON-RR'),to_date('02-FEB-20','DD-MON-RR'),3,'UC1 ');
+Insert into CAS (RBRCAS,DATCAS,VRECAS,IDK,SIFUC) values (1,to_date('02-FEB-20','DD-MON-RR'),to_date('02-FEB-20','DD-MON-RR'),1,'UC1 ');
+
+Insert into PRISUSTVUJE (IDK,JMBGP,RBRCAS) values (1,'0505005777005',2);
+Insert into PRISUSTVUJE (IDK,JMBGP,RBRCAS) values (1,'0605005777005',1);
+Insert into PRISUSTVUJE (IDK,JMBGP,RBRCAS) values (1,'0505005777005',1);
